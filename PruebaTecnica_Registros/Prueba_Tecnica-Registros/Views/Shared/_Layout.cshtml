@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Prueba Tecnica - Sergio Correal</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /></link>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background: -webkit-linear-gradient(90deg, lightgray 25%, lightsteelblue 75%)" />
+    <header style="background-color: black; color: white; text-align:center"><br/>
+        <h3>.: Registro de Seccion :.</h3><br />
+    </header>
+    <nav class="row" style="background-color: gray; height: 40px; margin: 1px 1px 1px 1px">
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="location.href ='../Seccion/Index'">Seccion</button>
+            <button class="btn btn-primary" onclick="location.href ='../Profesor/Index'">Profesor</button>
+            <button class="btn btn-primary" onclick="location.href ='../Alumno/Index'">Alumno</button>
+            <button class="btn btn-primary" onclick="location.href ='../Modulos/Index'">Modulo</button>
+        </div>
+    </nav>
+    <main class="row" style="margin: 2% 2% 2% 2%; background-color: beige; width: 96%">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+            <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+            <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+        </ul>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required:=False)
+    </body>
+</html>
